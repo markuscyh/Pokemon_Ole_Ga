@@ -36,24 +36,24 @@ public class Encounter_rate {
 	//randomly select a grade
 	private int selectRandomgrade() {
 		Random random = new Random();
-		int grade_selecter = random.nextInt(31) + 1;
+		int grade_selecter = random.nextInt(310) + 1;
 		
-		if (grade_selecter <= 10) {
+		if (grade_selecter <= 100) {
 			grade = 1;
 		}
-		else if (grade_selecter <= 18) {
+		else if (grade_selecter <= 180) {
 			grade = 2;
 		}
-		else if (grade_selecter <= 24) {
+		else if (grade_selecter <= 240) {
 			grade = 3;
 		}
-		else if (grade_selecter <= 28) {
+		else if (grade_selecter <= 280) {
 			grade = 4;
 		}
-		else if (grade_selecter <= 30) {
+		else if (grade_selecter <= 300) {
 			grade = 5;
 		}
-		else if (grade_selecter == 31) {
+		else if (grade_selecter == 310) {
 			grade = 6;
 		}
 		
