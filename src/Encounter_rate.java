@@ -53,7 +53,7 @@ public class Encounter_rate {
 		else if (grade_selecter <= 30) {
 			grade = 5;
 		}
-		else if (grade_selecter <= 31) {
+		else if (grade_selecter == 31) {
 			grade = 6;
 		}
 		
