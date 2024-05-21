@@ -34,66 +34,66 @@ public class Catchrate {
 	
 	private void Grade1catch(double catchr) {
 		double catchchance = 70 * catchr;
-		double catchsuccess = random.nextInt(100) + 1;
-		if (catchchance >= catchsuccess) {
+		double catchsuccessthreshold = random.nextInt(100) + 1;
+		if (catchchance >= catchsuccessthreshold) {
 			success = 1;
 		}
-		else if (catchchance <= catchsuccess) {
+		else if (catchchance <= catchsuccessthreshold) {
 			success = 0;
 		}
 	}
 	
 	private void Grade2catch(double catchr) {
 		double catchchance = 55.75 * catchr;
-		double catchsuccess = random.nextInt(100) + 1;
-		if (catchchance >= catchsuccess) {
+		double catchsuccessthreshold = random.nextInt(100) + 1;
+		if (catchchance >= catchsuccessthreshold) {
 			success = 1;
 		}
-		else if (catchchance <= catchsuccess) {
+		else if (catchchance <= catchsuccessthreshold) {
 			success = 0;
 		}
 	}
 	
 	private void Grade3catch(double catchr) {
 		double catchchance = 40.5 * catchr;
-		double catchsuccess = random.nextInt(100) + 1;
-		if (catchchance >= catchsuccess) {
+		double catchsuccessthreshold = random.nextInt(100) + 1;
+		if (catchchance >= catchsuccessthreshold) {
 			success = 1;
 		}
-		else if (catchchance <= catchsuccess) {
+		else if (catchchance <= catchsuccessthreshold) {
 			success = 0;
 		}
 	}
 	
 	private void Grade4catch(double catchr) {
 		double catchchance = 20.25 * catchr;
-		double catchsuccess = random.nextInt(100) + 1;
-		if (catchchance >= catchsuccess) {
+		double catchsuccessthreshold = random.nextInt(100) + 1;
+		if (catchchance >= catchsuccessthreshold) {
 			success = 1;
 		}
-		else if (catchchance <= catchsuccess) {
+		else if (catchchance <= catchsuccessthreshold) {
 			success = 0;
 		}
 	}
 	
 	private void Grade5catch(double catchr) {
 		double catchchance = 2.64 * catchr;
-		double catchsuccess = random.nextInt(100) + 1;
-		if (catchchance >= catchsuccess) {
+		double catchsuccessthreshold = random.nextInt(100) + 1;
+		if (catchchance >= catchsuccessthreshold) {
 			success = 1;
 		}
-		else if (catchchance <= catchsuccess) {
+		else if (catchchance <= catchsuccessthreshold) {
 			success = 0;
 		}
 	}
 	
 	private void Grade6catch(double catchr) {
 		double catchchance = 1 * catchr;
-		double catchsuccess = random.nextInt(100) + 1;
-		if (catchchance >= catchsuccess) {
+		double catchsuccessthreshold = random.nextInt(100) + 1;
+		if (catchchance >= catchsuccessthreshold) {
 			success = 1;
 		}
-		else if (catchchance <= catchsuccess) {
+		else if (catchchance <= catchsuccessthreshold) {
 			success = 0;
 		}
 	}

@@ -7,7 +7,7 @@ public enum PokemonEncyclopedia {
 	METAPOD("Metapod", 110, 22, 70, 27, 27, 31, "Bug", null, "Tackle", "Bug_Bite", 1400, 700),
 	PIDGEY("Pidgey", 100, 45, 40, 36, 36, 54, "Normal", "Flying", "Tackle", "Gust", 1400, 700),
 	RATTATA("Rattata", 90, 54, 36, 27, 36, 69, "Normal", null, "Tackle", "Bite", 1400, 700),
-	SHUCKLE("Shuckle", 80, 13, 211, 13, 211, 9, "Bug", "Rock", "Bug_Bite", "Rock_Throw", 1400, 700),
+	SHUCKLE("Shuckle", 80, 13, 211, 13, 150, 9, "Bug", "Rock", "Bug_Bite", "Rock_Throw", 1400, 700),
 	SUNKERN("Sunkern", 90, 31, 31, 31, 31, 31, "Grass", null, "Tackle", "Razor_Leaf", 1400, 700),
 	SWINUB("Swinub", 110, 49, 40, 31, 31, 49, "Ice", "Ground", "Mud_Slap", "Powder_Snow", 1400, 700),
 	

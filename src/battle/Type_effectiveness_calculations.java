@@ -4,18 +4,6 @@ import java.util.List;
 
 public class Type_effectiveness_calculations {
 	
-	// String Type
-	// String StrongAgainst
-	// String weakAgaint
-	
-	
-	// Constructor ()
-	// -- if TYPE == "Normal";
-	//  then StrongAgainst = Nan;
-	//       WeakAgainst = "";
-	
-	
-	
 	List<String> normal_ineffective = List.of("Rock", "Steel");
 	List<String> normal_immune = List.of("Ghost");
 	
