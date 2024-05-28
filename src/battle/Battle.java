@@ -65,7 +65,6 @@ public class Battle {
 				}
 				else {
 				String selectedmove = moveSelector(userpokemon1.getName(), userpokemon1.getMovecode1(), userpokemon1.getMovecode2());
-				
 				String selectedtarget = targetSelector();
 				
 				attackSimulation1(selectedmove, selectedtarget);
@@ -78,13 +77,10 @@ public class Battle {
 					System.out.println(userpokemon2.getName() + " has fainted");
 				}
 				else {
-				
 				String selectedmove = moveSelector(userpokemon2.getName(), userpokemon2.getMovecode1(), userpokemon2.getMovecode2());
-				
 				String selectedtarget = targetSelector();
 				
-				attackSimulation2(selectedmove, selectedtarget);
-				
+				attackSimulation2(selectedmove, selectedtarget);	
 				}
 			}
 			else if (enemyturncounter1 == 0) {
@@ -100,7 +96,6 @@ public class Battle {
 							if (enemypokemon1.getMovecategory1().equals("Physical")) {
 								double finaldamage = damage - userpokemon1.getDefense();
 								finaldamage = finaldamageCalculations(finaldamage, enemypokemon1.getMovetype1(), userpokemon1.getType1(), userpokemon1.getType2());
-								finaldamage = type_calculations.finalDamagechecker(finaldamage, enemypokemon1.getMovetype1(), userpokemon1.getType1(), userpokemon1.getType2());
 								
 								userpokemon1.setHp(userpokemon1.getHp() - finaldamage);
 							}
@@ -108,7 +103,6 @@ public class Battle {
 							else if (enemypokemon1.getMovecategory1().equals("Special")) {
 								double finaldamage = damage - userpokemon1.getSp_def();
 								finaldamage = finaldamageCalculations(finaldamage, enemypokemon1.getMovetype1(), userpokemon1.getType1(), userpokemon1.getType2());
-								finaldamage = type_calculations.finalDamagechecker(finaldamage, enemypokemon1.getMovetype1(), userpokemon1.getType1(), userpokemon1.getType2());
 								
 								userpokemon1.setHp(userpokemon1.getHp() - finaldamage);
 							}
@@ -119,7 +113,6 @@ public class Battle {
 							if (enemypokemon1.getMovecategory2().equals("Physical")) {
 								double finaldamage = damage - userpokemon1.getDefense();
 								finaldamage = finaldamageCalculations(finaldamage, enemypokemon1.getMovetype2(), userpokemon1.getType1(), userpokemon1.getType2());
-								finaldamage = type_calculations.finalDamagechecker(finaldamage, enemypokemon1.getMovetype2(), userpokemon1.getType1(), userpokemon1.getType2());
 								
 								userpokemon1.setHp(userpokemon1.getHp() - finaldamage);
 							}
@@ -127,7 +120,6 @@ public class Battle {
 							else if (enemypokemon1.getMovecategory2().equals("Special")) {
 								double finaldamage = damage - userpokemon1.getSp_def();
 								finaldamage = finaldamageCalculations(finaldamage, enemypokemon1.getMovetype2(), userpokemon1.getType1(), userpokemon1.getType2());
-								finaldamage = type_calculations.finalDamagechecker(finaldamage, enemypokemon1.getMovetype2(), userpokemon1.getType1(), userpokemon1.getType2());
 								
 								userpokemon1.setHp(userpokemon1.getHp() - finaldamage);
 							}
@@ -140,7 +132,6 @@ public class Battle {
 							if (enemypokemon1.getMovecategory1().equals("Physical")) {
 								double finaldamage = damage - userpokemon2.getDefense();
 								finaldamage = finaldamageCalculations(finaldamage, enemypokemon1.getMovetype1(), userpokemon2.getType1(), userpokemon2.getType2());
-								finaldamage = type_calculations.finalDamagechecker(finaldamage, enemypokemon1.getMovetype1(), userpokemon2.getType1(), userpokemon2.getType2());
 								
 								userpokemon2.setHp(userpokemon2.getHp() - finaldamage);
 							}
@@ -148,7 +139,6 @@ public class Battle {
 							else if (enemypokemon1.getMovecategory1().equals("Special")) {
 								double finaldamage = damage - userpokemon2.getSp_def();
 								finaldamage = finaldamageCalculations(finaldamage, enemypokemon1.getMovetype1(), userpokemon2.getType1(), userpokemon2.getType2());
-								finaldamage = type_calculations.finalDamagechecker(finaldamage, enemypokemon1.getMovetype1(), userpokemon2.getType1(), userpokemon2.getType2());
 								
 								userpokemon2.setHp(userpokemon2.getHp() - finaldamage);
 							}
@@ -159,14 +149,12 @@ public class Battle {
 							if (enemypokemon1.getMovecategory2().equals("Physical")) {
 								double finaldamage = damage - userpokemon2.getDefense();
 								finaldamage = finaldamageCalculations(finaldamage, enemypokemon1.getMovetype2(), userpokemon2.getType1(), userpokemon2.getType2());
-								finaldamage = type_calculations.finalDamagechecker(finaldamage, enemypokemon1.getMovetype2(), userpokemon2.getType1(), userpokemon2.getType2());
 								
 								userpokemon2.setHp(userpokemon2.getHp() - finaldamage);
 							}
 							else if (enemypokemon1.getMovecategory2().equals("Special")) {
 								double finaldamage = damage - userpokemon2.getSp_def();
 								finaldamage = finaldamageCalculations(finaldamage, enemypokemon1.getMovetype2(), userpokemon2.getType1(), userpokemon2.getType2());
-								finaldamage = type_calculations.finalDamagechecker(finaldamage, enemypokemon1.getMovetype2(), userpokemon2.getType1(), userpokemon2.getType2());
 								
 								userpokemon2.setHp(userpokemon2.getHp() - finaldamage);
 							}
@@ -194,7 +182,6 @@ public class Battle {
 							if (enemypokemon2.getMovecategory1().equals("Physical")) {
 								double finaldamage = damage - userpokemon1.getDefense();
 								finaldamage = finaldamageCalculations(finaldamage, enemypokemon2.getMovetype1(), userpokemon1.getType1(), userpokemon1.getType2());
-								finaldamage = type_calculations.finalDamagechecker(finaldamage, enemypokemon2.getMovetype1(), userpokemon1.getType1(), userpokemon1.getType2());
 								
 								userpokemon1.setHp(userpokemon1.getHp() - finaldamage);
 							}
@@ -202,7 +189,6 @@ public class Battle {
 							else if (enemypokemon2.getMovecategory1().equals("Special")) {
 								double finaldamage = damage - userpokemon1.getSp_def();
 								finaldamage = finaldamageCalculations(finaldamage, enemypokemon2.getMovetype1(), userpokemon1.getType1(), userpokemon1.getType2());
-								finaldamage = type_calculations.finalDamagechecker(finaldamage, enemypokemon2.getMovetype1(), userpokemon1.getType1(), userpokemon1.getType2());
 								
 								userpokemon1.setHp(userpokemon1.getHp() - finaldamage);
 							}
@@ -213,7 +199,6 @@ public class Battle {
 							if (enemypokemon2.getMovecategory2().equals("Physical")) {
 								double finaldamage = damage - userpokemon2.getDefense();
 								finaldamage = finaldamageCalculations(finaldamage, enemypokemon2.getMovetype2(), userpokemon1.getType1(), userpokemon1.getType2());
-								finaldamage = type_calculations.finalDamagechecker(finaldamage, enemypokemon2.getMovetype2(), userpokemon1.getType1(), userpokemon1.getType2());
 								
 								userpokemon1.setHp(userpokemon1.getHp() - finaldamage);
 							}
@@ -221,7 +206,6 @@ public class Battle {
 							else if (enemypokemon2.getMovecategory2().equals("Special")) {
 								double finaldamage = damage - userpokemon2.getSp_def();
 								finaldamage = finaldamageCalculations(finaldamage, enemypokemon2.getMovetype2(), userpokemon1.getType1(), userpokemon1.getType2());
-								finaldamage = type_calculations.finalDamagechecker(finaldamage, enemypokemon2.getMovetype2(), userpokemon1.getType1(), userpokemon1.getType2());
 								
 								userpokemon1.setHp(userpokemon1.getHp() - finaldamage);
 							}
@@ -237,7 +221,6 @@ public class Battle {
 							if (enemypokemon2.getMovecategory1().equals("Physical")) {
 								double finaldamage = damage - userpokemon2.getDefense();
 								finaldamage = finaldamageCalculations(finaldamage, enemypokemon2.getMovetype1(), userpokemon2.getType1(), userpokemon2.getType2());
-								finaldamage = type_calculations.finalDamagechecker(finaldamage, enemypokemon2.getMovetype1(), userpokemon2.getType1(), userpokemon2.getType2());
 								
 								userpokemon2.setHp(userpokemon2.getHp() - finaldamage);
 							}
@@ -245,7 +228,6 @@ public class Battle {
 							else if (enemypokemon2.getMovecategory1().equals("Special")) {
 								double finaldamage = damage - userpokemon2.getSp_def();
 								finaldamage = finaldamageCalculations(finaldamage, enemypokemon2.getMovetype1(), userpokemon2.getType1(), userpokemon2.getType2());
-								finaldamage = type_calculations.finalDamagechecker(finaldamage, enemypokemon2.getMovetype1(), userpokemon2.getType1(), userpokemon2.getType2());
 								
 								userpokemon2.setHp(userpokemon2.getHp() - finaldamage);
 							}
@@ -256,14 +238,12 @@ public class Battle {
 							if (enemypokemon2.getMovecategory2().equals("Physical")) {
 								double finaldamage = damage - userpokemon2.getDefense();
 								finaldamage = finaldamageCalculations(finaldamage, enemypokemon2.getMovetype2(), userpokemon2.getType1(), userpokemon2.getType2());
-								finaldamage = type_calculations.finalDamagechecker(finaldamage, enemypokemon2.getMovetype2(), userpokemon2.getType1(), userpokemon2.getType2());
 								
 								userpokemon2.setHp(userpokemon2.getHp() - finaldamage);
 							}
 							else if (enemypokemon2.getMovecategory2().equals("Special")) {
 								double finaldamage = damage - userpokemon2.getSp_def();
 								finaldamage = finaldamageCalculations(finaldamage, enemypokemon2.getMovetype2(), userpokemon2.getType1(), userpokemon2.getType2());
-								finaldamage = type_calculations.finalDamagechecker(finaldamage, enemypokemon2.getMovetype2(), userpokemon2.getType1(), userpokemon2.getType2());
 								
 								userpokemon2.setHp(userpokemon2.getHp() - finaldamage);
 							}
@@ -364,7 +344,6 @@ public class Battle {
 				if (userpokemon1.getMovecategory1().equals("Physical")) {
 					double finaldamage = damage - enemypokemon1.getDefense();
 					finaldamage = finaldamageCalculations(finaldamage, userpokemon1.getMovetype1(), enemypokemon1.getType1(), enemypokemon1.getType2());
-					finaldamage = type_calculations.finalDamagechecker(finaldamage, userpokemon1.getMovetype1(), enemypokemon1.getType1(), enemypokemon1.getType2());
 					
 					enemypokemon1.setHp(enemypokemon1.getHp() - finaldamage);
 				}
@@ -372,7 +351,6 @@ public class Battle {
 				else if (userpokemon1.getMovecategory1().equals("Special")) {
 					double finaldamage = damage - enemypokemon1.getSp_def();
 					finaldamage = finaldamageCalculations(finaldamage, userpokemon1.getMovetype1(), enemypokemon1.getType1(), enemypokemon1.getType2());
-					finaldamage = type_calculations.finalDamagechecker(finaldamage, userpokemon1.getMovetype1(), enemypokemon1.getType1(), enemypokemon1.getType2());
 					
 					enemypokemon1.setHp(enemypokemon1.getHp() - finaldamage);
 				}
@@ -382,7 +360,6 @@ public class Battle {
 				if (userpokemon1.getMovecategory1().equals("Physical")) {					
 					double finaldamage = damage - enemypokemon2.getDefense();
 					finaldamage = finaldamageCalculations(finaldamage, userpokemon1.getMovetype1(), enemypokemon2.getType1(), enemypokemon2.getType2());
-					finaldamage = type_calculations.finalDamagechecker(finaldamage, userpokemon1.getMovetype1(), enemypokemon2.getType1(), enemypokemon2.getType2());
 					
 					enemypokemon2.setHp(enemypokemon2.getHp() - finaldamage);
 				}
@@ -390,7 +367,6 @@ public class Battle {
 				else if (userpokemon1.getMovecategory1().equals("Special")) {
 					double finaldamage = damage - enemypokemon2.getSp_def();
 					finaldamage = finaldamageCalculations(finaldamage, userpokemon1.getMovetype1(), enemypokemon2.getType1(), enemypokemon2.getType2());
-					finaldamage = type_calculations.finalDamagechecker(finaldamage, userpokemon1.getMovetype1(), enemypokemon2.getType1(), enemypokemon2.getType2());
 					
 					enemypokemon2.setHp(enemypokemon2.getHp() - finaldamage);
 				}
@@ -403,7 +379,6 @@ public class Battle {
 				if (userpokemon1.getMovecategory2().equals("Physical")) {
 					double finaldamage = damage - enemypokemon1.getDefense();
 					finaldamage = finaldamageCalculations(finaldamage, userpokemon1.getMovetype2(), enemypokemon1.getType1(), enemypokemon1.getType2());
-					finaldamage = type_calculations.finalDamagechecker(finaldamage, userpokemon1.getMovetype2(), enemypokemon1.getType1(), enemypokemon1.getType2());
 					
 					enemypokemon1.setHp(enemypokemon1.getHp() - finaldamage);
 				}
@@ -411,7 +386,6 @@ public class Battle {
 				else if (userpokemon1.getMovecategory2().equals("Special")) {
 					double finaldamage = damage - enemypokemon1.getSp_def();
 					finaldamage = finaldamageCalculations(finaldamage, userpokemon1.getMovetype2(), enemypokemon1.getType1(), enemypokemon1.getType2());
-					finaldamage = type_calculations.finalDamagechecker(finaldamage, userpokemon1.getMovetype2(), enemypokemon1.getType1(), enemypokemon1.getType2());
 					
 					enemypokemon1.setHp(enemypokemon1.getHp() - finaldamage);
 				}
@@ -421,7 +395,6 @@ public class Battle {
 				if (userpokemon1.getMovecategory2().equals("Physical")) {
 					double finaldamage = damage - enemypokemon2.getDefense();
 					finaldamage = finaldamageCalculations(finaldamage, userpokemon1.getMovetype2(), enemypokemon2.getType1(), enemypokemon2.getType2());
-					finaldamage = type_calculations.finalDamagechecker(finaldamage, userpokemon1.getMovetype2(), enemypokemon2.getType1(), enemypokemon2.getType2());
 					
 					enemypokemon2.setHp(enemypokemon2.getHp() - finaldamage);
 				}
@@ -429,7 +402,6 @@ public class Battle {
 				else if (userpokemon1.getMovecategory2().equals("Special")) {
 					double finaldamage = damage - enemypokemon2.getSp_def();
 					finaldamage = finaldamageCalculations(finaldamage, userpokemon1.getMovetype2(), enemypokemon2.getType1(), enemypokemon2.getType2());
-					finaldamage = type_calculations.finalDamagechecker(finaldamage, userpokemon1.getMovetype2(), enemypokemon2.getType1(), enemypokemon2.getType2());
 					
 					enemypokemon2.setHp(enemypokemon2.getHp() - finaldamage);
 				}
@@ -450,7 +422,6 @@ public class Battle {
 				if (userpokemon2.getMovecategory1().equals("Physical")) {
 					double finaldamage = damage - enemypokemon1.getDefense();
 					finaldamage = finaldamageCalculations(finaldamage, userpokemon2.getMovetype1(), enemypokemon1.getType1(), enemypokemon1.getType2());
-					finaldamage = type_calculations.finalDamagechecker(finaldamage, userpokemon2.getMovetype1(), enemypokemon1.getType1(), enemypokemon1.getType2());
 					
 					enemypokemon1.setHp(enemypokemon1.getHp() - finaldamage);
 				}
@@ -458,7 +429,6 @@ public class Battle {
 				else if (userpokemon2.getMovecategory1().equals("Special")) {
 					double finaldamage = damage - enemypokemon1.getSp_def();
 					finaldamage = finaldamageCalculations(finaldamage, userpokemon2.getMovetype1(), enemypokemon1.getType1(), enemypokemon1.getType2());
-					finaldamage = type_calculations.finalDamagechecker(finaldamage, userpokemon2.getMovetype1(), enemypokemon1.getType1(), enemypokemon1.getType2());
 					
 					enemypokemon1.setHp(enemypokemon1.getHp() - finaldamage);
 				}
@@ -468,7 +438,6 @@ public class Battle {
 				if (userpokemon2.getMovecategory1().equals("Physical")) {
 					double finaldamage = damage - enemypokemon2.getDefense();
 					finaldamage = finaldamageCalculations(finaldamage, userpokemon2.getMovetype1(), enemypokemon2.getType1(), enemypokemon2.getType2());
-					finaldamage = type_calculations.finalDamagechecker(finaldamage, userpokemon2.getMovetype1(), enemypokemon2.getType1(), enemypokemon2.getType2());
 					
 					enemypokemon2.setHp(enemypokemon2.getHp() - finaldamage);
 				}
@@ -476,7 +445,6 @@ public class Battle {
 				else if (userpokemon2.getMovecategory1().equals("Special")) {
 					double finaldamage = damage - enemypokemon2.getSp_def();
 					finaldamage = finaldamageCalculations(finaldamage, userpokemon2.getMovetype1(), enemypokemon2.getType1(), enemypokemon2.getType2());
-					finaldamage = type_calculations.finalDamagechecker(finaldamage, userpokemon2.getMovetype1(), enemypokemon2.getType1(), enemypokemon2.getType2());
 					
 					enemypokemon2.setHp(enemypokemon2.getHp() - finaldamage);
 				}
@@ -488,7 +456,6 @@ public class Battle {
 				if (userpokemon2.getMovecategory2().equals("Physical")) {
 					double finaldamage = damage - enemypokemon1.getDefense();
 					finaldamage = finaldamageCalculations(finaldamage, userpokemon2.getMovetype2(), enemypokemon1.getType1(), enemypokemon1.getType2());
-					finaldamage = type_calculations.finalDamagechecker(finaldamage, userpokemon2.getMovetype2(), enemypokemon1.getType1(), enemypokemon1.getType2());
 					
 					enemypokemon1.setHp(enemypokemon1.getHp() - finaldamage);
 				}
@@ -496,7 +463,6 @@ public class Battle {
 				else if (userpokemon2.getMovecategory2().equals("Special")) {
 					double finaldamage = damage - enemypokemon1.getSp_def();
 					finaldamage = finaldamageCalculations(finaldamage, userpokemon2.getMovetype2(), enemypokemon1.getType1(), enemypokemon1.getType2());
-					finaldamage = type_calculations.finalDamagechecker(finaldamage, userpokemon2.getMovetype2(), enemypokemon1.getType1(), enemypokemon1.getType2());
 					
 					enemypokemon1.setHp(enemypokemon1.getHp() - finaldamage);
 				}
@@ -506,7 +472,6 @@ public class Battle {
 				if (userpokemon2.getMovecategory2().equals("Physical")) {
 					double finaldamage = damage - enemypokemon2.getDefense();
 					finaldamage = finaldamageCalculations(finaldamage, userpokemon2.getMovetype2(), enemypokemon2.getType1(), enemypokemon2.getType2());
-					finaldamage = type_calculations.finalDamagechecker(finaldamage, userpokemon2.getMovetype2(), enemypokemon2.getType1(), enemypokemon2.getType2());
 					
 					enemypokemon2.setHp(enemypokemon2.getHp() - finaldamage);
 				}
@@ -514,7 +479,6 @@ public class Battle {
 				else if (userpokemon2.getMovecategory2().equals("Special")) {
 					double finaldamage = damage - enemypokemon2.getSp_def();
 					finaldamage = finaldamageCalculations(finaldamage, userpokemon2.getMovetype2(), enemypokemon2.getType1(), enemypokemon2.getType2());
-					finaldamage = type_calculations.finalDamagechecker(finaldamage, userpokemon2.getMovetype2(), enemypokemon2.getType1(), enemypokemon2.getType2());
 					
 					enemypokemon2.setHp(enemypokemon2.getHp() - finaldamage);
 				}
@@ -540,6 +504,7 @@ public class Battle {
 		finaldamage = type_calculations.type_checker(finaldamage, attackingtype, defendingtype1);
 		finaldamage = type_calculations.type_checker(finaldamage, attackingtype, defendingtype2);
 		finaldamage = Math.ceil(finaldamage);
+		finaldamage = type_calculations.finalDamagechecker(finaldamage, attackingtype, defendingtype1, defendingtype2);
 		
 		return finaldamage;
 	}

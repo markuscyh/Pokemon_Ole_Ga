@@ -3,7 +3,6 @@ import pokemon.EnemyPokemon;
 import pokemon.UserPokemon;
 import battle.*;
 
-
 public class Pokemon_GaOle {
 
 	public static void main(String[] args) {
