@@ -10,19 +10,21 @@ public class Pokemon_GaOle {
 		
 		System.out.println("Welcome to Pokemon Ole'Ga!\n");
 		
+		System.out.println("You are walking through the woods, where you encounter 3 Pokemon. \nAll 3 of them are Pokemon that you want to collect, however you only have 1 Pokeball. \nYou know catching 1 of them would result in the other 2 attacking you, lucky for you you have another Pokemon on you. \n");
+		
 		Encounter_rate encounterone = new Encounter_rate();
 		Encounter_rate encountertwo = new Encounter_rate();
 		Encounter_rate encounterthree = new Encounter_rate();
 
-		System.out.println("You have encountered: ");
+		System.out.println("Taking your chances, you throw your Pokeball at: ");
 		//This section selects the first pokemon encountered
-		System.out.println("1) A grade " + encounterone.getGrade() + " " + encounterone.getName() + ",");
+		System.out.println("1) The grade " + encounterone.getGrade() + " " + encounterone.getName() + ",");
 		
 		//This selects the second pokemon encountered
-		System.out.println("2) A grade " + encountertwo.getGrade() + " " + encountertwo.getName() + ", ");
+		System.out.println("2) The grade " + encountertwo.getGrade() + " " + encountertwo.getName() + ", ");
 		
 		//This selects the third pokemon encountered
-		System.out.println("3) A grade " + encounterthree.getGrade() + " " + encounterthree.getName() + "\n");
+		System.out.println("3) The grade " + encounterthree.getGrade() + " " + encounterthree.getName() + "\n");
 		
 		
 		UserPokemon userpokemon1 = new UserPokemon();
@@ -30,7 +32,7 @@ public class Pokemon_GaOle {
 		EnemyPokemon enemypokemon1 = new EnemyPokemon();
 		EnemyPokemon enemypokemon2 = new EnemyPokemon();
 		
-		System.out.println("Which of these Pokemon would you like to catch? (1-3)");
+		System.out.println("Which of these Pokemon are you going to catch? (1-3)");
 		
 		int loop_tracker = 1;
 		while (loop_tracker == 1) {
@@ -62,7 +64,7 @@ public class Pokemon_GaOle {
 
 			}
 			else {
-				System.out.println("\nPlease enter a number from 1 to 3 to select your desired Pokemon. \n");
+				System.out.println("\nPlease enter a number from 1 to 3 to catch your desired Pokemon. \n");
 				
 				System.out.println("You have encountered: ");
 				System.out.println("1) A grade " + encounterone.getGrade() + " " + encounterone.getName() + ",");
@@ -74,11 +76,11 @@ public class Pokemon_GaOle {
 		Encounter_rate rentalpokemon1 = new Encounter_rate();
 		Encounter_rate rentalpokemon2 = new Encounter_rate();
 		
-		System.out.println("\nYou can select one of two pokemon to join you in the upcoming battle: ");
+		System.out.println("\nNow who was your partner Pokemon again?: ");
 		System.out.println("1) A grade " + rentalpokemon1.getGrade() + " " + rentalpokemon1.getName() + ", ");
 		System.out.println("2) A grade " + rentalpokemon2.getGrade() + " " + rentalpokemon2.getName() + "\n");
 		
-		System.out.println("Which of these Pokemon would you like to join you? (1-2)");
+		System.out.println("Do you recall which of these Pokemon was your partner? (1-2)");
 
 		loop_tracker = 1;
 		while (loop_tracker == 1) {
@@ -94,7 +96,7 @@ public class Pokemon_GaOle {
 				userpokemon2 = new UserPokemon(rentalpokemon2.getName(), rentalpokemon2.getHp(), rentalpokemon2.getAttack(), rentalpokemon2.getDefense(), rentalpokemon2.getSp_atk(), rentalpokemon2.getSp_def(), rentalpokemon2.getSpeed(), rentalpokemon2.getType1(), rentalpokemon2.getType2(), rentalpokemon2.getMove1(), rentalpokemon2.getMove2(), rentalpokemon1.getMaxpe(), rentalpokemon1.getMinpe());
 				}
 			else {
-				System.out.println("\nPlease enter a number from 1 to 2 to select your desired Pokemon. \n");
+				System.out.println("\nPlease enter a number from 1 to 2 to select remember your Pokemon. \n");
 				
 				System.out.println("1) A grade " + rentalpokemon1.getGrade() + " " + rentalpokemon1.getName() + ", ");
 				System.out.println("2) A grade " + rentalpokemon2.getGrade() + " " + rentalpokemon2.getName() + "\n");
@@ -116,13 +118,15 @@ public class Pokemon_GaOle {
 		
 		if (pokemon_battle == 1) {
 			System.out.println("You won the battle! \n");
-			System.out.println("It's time to throw a Pokeball!");
-			System.out.println("Enter a key to select a random Pokeball! ");
+			System.out.println("Looking around you spot a glint in the shrubs! Its the familiar glint of a Pokeball");
+			System.out.println("In fact, it seems like there are two of them. You don't know what type of Pokeball they are but you are certain that they are the same type and really want to catch the other two Pokemon");
+			System.out.println("Enter a key to pick up the unknown Pokeballs! ");
 			System.out.print(">>> ");
 			String input = keyboard.next();
 			
 			Pokeball pokeball = new Pokeball();
 			
+			System.out.println("It's a " + pokeball.getPokeballType() + "!");
 			System.out.println("\n" + pokeball.getPokeballType() + ", I choose you!!! \n");
 			
 			Catchrate catchpokemon1 = new Catchrate();
@@ -150,7 +154,7 @@ public class Pokemon_GaOle {
 		
 		else {
 			System.out.println("You lost the battle! \n");
-			System.out.println("You have blacked out by the sheer shock of your loss.");
+			System.out.println("You, unable to accept the fact that you lost a battle, have blacked out.");
 			System.out.println("Game Over!");
 		}
 		

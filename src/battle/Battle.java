@@ -162,7 +162,9 @@ public class Battle {
 					}
 					hpInfo();
 					try {
-			            Thread.sleep(2000);
+			            Thread.sleep(9000);
+			            System.out.print("\033[H\033[2J");
+			            System.out.flush();
 			        } catch (InterruptedException e) {
 			            e.printStackTrace();
 			        }
@@ -251,7 +253,9 @@ public class Battle {
 					}
 					hpInfo();
 					try {
-			            Thread.sleep(2000);
+			            Thread.sleep(9000);
+			            System.out.print("\033[H\033[2J");
+			            System.out.flush();
 			        } catch (InterruptedException e) {
 			            e.printStackTrace();
 			        }
@@ -409,7 +413,9 @@ public class Battle {
 		}
 		hpInfo();
 		try {
-            Thread.sleep(2000);
+            Thread.sleep(9000);
+            System.out.print("\033[H\033[2J");
+            System.out.flush();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -486,7 +492,9 @@ public class Battle {
 		}
 		hpInfo();
 		try {
-            Thread.sleep(2000);
+            Thread.sleep(9000);
+            System.out.print("\033[H\033[2J");
+            System.out.flush();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

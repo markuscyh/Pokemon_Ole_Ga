@@ -5,7 +5,6 @@ public enum MovesEncyclopedia {
 	TACKLE("Tackle", "Normal", "Physical", 40, 100, 0, 0, 0, 0),
 	BUG_BITE("Bug Bite", "Bug", "Physical", 60, 100, 0, 0, 0, 0),
 	SPLASH("Splash", "Water", "Physical", 0, 100, 0, 0, 0, 0),
-	HARDEN("Harden", "Normal", "Status", 0, 100, 0, 20, 0, 0),
 	GUST("Gust", "Flying", "Special", 40, 100, 0, 0, 0, 0),
 	BITE("Bite", "Dark", "Physical", 60, 100, 0, 0, 0, 0),
 	ROCK_THROW("Rock Throw", "Rock", "Physical", 50, 90, 0, 0, 0, 0),
